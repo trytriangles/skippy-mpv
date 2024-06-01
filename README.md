@@ -4,7 +4,7 @@ An [mpv](https://github.com/mpv-player/mpv) script to skip the unwanted portions
 
 ## Description
 
-During audio or video playback, skippy-mpv looks for an .edl (edit decision list) file with the same name and location of your media file. If that EDL file exists, consists of (start timestamp, end timestamp, flag int) lines like
+During audio or video playback, skippy-mpv looks for an .edl (edit decision list) file with the same basename and location as your media file. If that EDL file exists, consists of (start timestamp, end timestamp, flag int) lines like
 
 ```
 01:20:33.213 01:23:14.000 0
