@@ -69,6 +69,10 @@ local function on_file_loaded(name, value)
     if value == nil then return end
     mp.unobserve_property(on_time_pos_change)
     local edl_path = strip_extension(value) .. ".edl"
+    if value == edl_path then
+        -- We're playing an EDL file, which cannot itself have a sidecar EDL.
+        return
+    end
     local file_content = read_file(edl_path)
     if file_content == nil then
         -- No EDL found, or file could not be read.
